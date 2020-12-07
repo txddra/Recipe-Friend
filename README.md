@@ -14,3 +14,5 @@
 1. Enter an ingredient into the search bar
 2. Within seconds you'll receive 3 options based off the ingredient  
 3. You have your recipes, and you're all ready to start cooking
+
+### *Happy hunting!*

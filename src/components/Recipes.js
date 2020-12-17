@@ -4,15 +4,29 @@ import React from 'react'
 
 export const Recipes = (props) => {
     return (
-       <div>
-          {props.recipes.map((recipe)=>{
+    <div className = "container">
+        <div className="row">
+        {props.recipes.map((recipe)=>{
           return (
-            <div key ={recipe.recipe.label}>
-              <img src={recipe.recipe.image} alt={recipe.recipe.label}/>
-               <p>{recipe.recipe.label}</p>
-        </div>
+            <div key ={recipe.recipe.label} className = "col-md-4">
+                <div className ="recipe__box">
+            <img
+            className="recipe__box-img" 
+            src={recipe.recipe.image} 
+            alt={recipe.recipe.label}/>
+            <div className="recipe__text">
+                
+                <h5>{recipe.recipe.label}</h5>
+            </div>
+                </div>
+           </div>
+          
+       
           );
-          })}
+          }
+          )
+          } 
+          </div>
           </div>
 
           )

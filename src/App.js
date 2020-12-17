@@ -34,7 +34,7 @@ this.setState({recipes: recipeArr})
 // results.map((item)=>{
   
 // })
- console.log(this.state.recipes)
+console.log(this.state.recipes)
   }
 
   render(){

@@ -1,30 +1,14 @@
-import logo from './logo.svg';
+import React, { Component } from "react";
 import './App.css';
 
-function App() {
-  return (
-    <div className ="partial app">
-      <header className="App-header">
-    <h1>
-           Recipe Friend   
-           </h1> 
-      </header>
-
-
-    <div className="App">
-           <h3> 
-             <em> 
-
-             The handy, helpful food finder
-             </em>
-              </h3>
-              <br /> 
-              <p><u>Under Construction</u><s/p>
-              <h2>COMING SOON!</h2>
-    </div>
-      
-    </div>
-  );
+class App extends Component{
+  render(){
+    return(
+      <div className ="App">
+        <header className="App-header">
+          <h1 className="app-title"> Recipe Friend</h1>
+        </header>
+      </div>
+    );
+  }
 }
-
-export default App;

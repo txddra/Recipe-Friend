@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import './App.css';
 
-import RecipeForm from './components/RecipeForm'
+import RecipeForm from './components/RecipeForm';
+import Recipes from './components/Recipes'
 
 const API_KEY1 =  `b87d0857`
 const API_KEY2 = `11bf59d067701580d54a3c72b5bd2161`;
@@ -43,20 +44,14 @@ this.setState({recipes: recipeArr})
           <h1 className="app-title"> Recipe Friend</h1>
         </header>
         <RecipeForm recipeGrab = {this.recipeGrab} />
-        {this.state.recipes.map((recipe)=>{
-          return (
-            <div>
-              <img src={recipe.recipe.image} alt={recipe.recipe.label}/>
-               <p key ={recipe.recipe.label}>{recipe.recipe.label}</p>
+       <Recipes recipes ={this.state.recipes} />
             </div>
            
           
 
           )
-        })}
-      </div>
-    );
+        }
   }
-}
+
 
 export default App; 

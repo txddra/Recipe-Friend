@@ -44,10 +44,15 @@ this.setState({recipes: recipeArr})
         </header>
         <RecipeForm recipeGrab = {this.recipeGrab} />
         {this.state.recipes.map((recipe)=>{
-          return <p 
-          key ={recipe.recipe.label}
-          >
-            {recipe.recipe.label}</p>
+          return (
+            <div>
+              <img src={recipe.recipe.image} alt={recipe.recipe.label}/>
+               <p key ={recipe.recipe.label}>{recipe.recipe.label}</p>
+            </div>
+           
+          
+
+          )
         })}
       </div>
     );

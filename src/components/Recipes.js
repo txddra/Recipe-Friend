@@ -9,7 +9,7 @@ export const Recipes = (props) => {
         {props.recipes.map((recipe)=>{
           return (
             <div key ={recipe.recipe.label} className = "col-md-4" style ={{marginBottom:"2rem"}}>
-                <div className ="recipe__box">
+                <div className ="recipes__box">
             <img
             className="recipe__box-img" 
             src={recipe.recipe.image} 
@@ -21,6 +21,7 @@ export const Recipes = (props) => {
                 <span>{recipe.recipe.source}</span>
 
             </div>
+            <button className = "recipe_button"> View Recipe</button>
                 </div>
            </div>
           

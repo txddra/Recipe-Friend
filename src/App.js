@@ -24,7 +24,7 @@ class App extends Component{
     e.preventDefault();
 
     const response = await fetch(
-`https://api.edamam.com/search?q=chicken&count=3&app_id=${API_KEY1}&app_key=${API_KEY2}`)
+`https://api.edamam.com/search?q=${recipeName}&count=3&app_id=${API_KEY1}&app_key=${API_KEY2}`)
 
 
 const results = await response.json();
@@ -44,7 +44,10 @@ this.setState({recipes: recipeArr})
         </header>
         <RecipeForm recipeGrab = {this.recipeGrab} />
         {this.state.recipes.map((recipe)=>{
-          return <p>{recipe.recipe.label}</p>
+          return <p 
+          key ={recipe.recipe.label}
+          >
+            {recipe.recipe.label}</p>
         })}
       </div>
     );

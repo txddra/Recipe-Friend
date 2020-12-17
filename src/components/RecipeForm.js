@@ -1,7 +1,10 @@
 import React from 'react';
 
-const RecipeForm = () =>(
-    <form>
+
+
+
+const RecipeForm = (props) =>(
+    <form onSubmit={props.recipeGrab} >
         <input type="text"></input>
         <button>Search</button>
     </form> 

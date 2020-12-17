@@ -10,7 +10,9 @@ class App extends Component{
 
   recipeGrab=(e)=>{
     e.preventDefault();
-    console.log("working")
+    const recipeName = e.target.elements.recipeName.value;
+
+    console.log(recipeName)
   }
 
   render(){

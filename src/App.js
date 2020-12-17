@@ -11,6 +11,10 @@ const API_KEY2 = `11bf59d067701580d54a3c72b5bd2161`;
 
 class App extends Component{
 
+  state={
+    recipes :[]
+  }
+
   //makes the call to the recipe api
 
   recipeGrab= async(e)=>{
@@ -20,11 +24,16 @@ class App extends Component{
     e.preventDefault();
 
     const response = await fetch(
-`https://api.edamam.com/search?q=chicken&app_id=${API_KEY1}&app_key=${API_KEY2}&from=0&to=3&calories=591-722&health=alcohol-free`)
+`https://api.edamam.com/search?q=chicken&count=3&app_id=${API_KEY1}&app_key=${API_KEY2}`)
 
 
 const results = await response.json();
-console.log(results)
+let recipeArr = results.hits;
+this.setState({recipes: recipeArr})
+// results.map((item)=>{
+  
+// })
+ console.log(this.state.recipes)
   }
 
   render(){
@@ -34,6 +43,9 @@ console.log(results)
           <h1 className="app-title"> Recipe Friend</h1>
         </header>
         <RecipeForm recipeGrab = {this.recipeGrab} />
+        {this.state.recipes.map((recipe)=>{
+          return <p>{recipe.recipe.label}</p>
+        })}
       </div>
     );
   }

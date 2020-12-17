@@ -8,7 +8,8 @@ class App extends Component{
 
   //makes the call to the recipe api
 
-  recipeGrab(){
+  recipeGrab=(e)=>{
+    e.preventDefault();
     console.log("working")
   }
 

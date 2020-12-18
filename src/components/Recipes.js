@@ -24,7 +24,7 @@ export const Recipes = (props) => {
                 <span>{recipe.recipe.source}</span>
 
             </div>
-            <button className = "recipe_button"> View Recipe</button>
+            <button className = "recipe_buttons"> View Recipe</button>
                 </div>
            </div>
           

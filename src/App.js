@@ -6,27 +6,39 @@ import Search from "./Search/Search"
 // import Recipes from './components/Recipes';
 
 
-const API_KEY1 =   process.env.REACT_APP_RECIPE_KEY_1
-const API_KEY2 =   process.env.REACT_APP_RECIPE_KEY_2
 // const chicken = ;
 
 
 
 function App(){
   const [searchValue, setSearchValue] = useState("");
+  
+  
+  async function recipeFetch (inputValue){
+    setSearchValue(inputValue);
+    
+    const API_KEY1 =   process.env.REACT_APP_RECIPE_KEY_1
+    const API_KEY2 =   process.env.REACT_APP_RECIPE_KEY_2
 
+    try{
+      const response = await fetch (`https://api.edamam.com/search?q=${inputValue}&count=3&app_id=${API_KEY1}&app_key=${API_KEY2}`)
 
+      const data =await response.json()
+    }catch(e){
+
+    }
+  }
   return (
 
 
     <div className="App">
         <header className="App-header">
           <h1 className="app-title"> Recipe Friend</h1>
-          <h3 className = "app-subtitle"><em>The helpful, handy food finder.</em></h3>
+          <h3 className = "app-subtitle" style={{marginTop:"2rem", marginBottom:"2rem"}}><em>The helpful, handy food finder.</em></h3>
         </header>
         <Search
         searchValue={searchValue}
-        setSearchValue ={setSearchValue} />
+        recipeFetch ={recipeFetch} />
     </div>
     
   )

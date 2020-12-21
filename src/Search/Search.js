@@ -1,8 +1,12 @@
 import React from 'react'
 
-const Search = () => {
+const Search = ({ser}) => {
     return (
         <div>
+            <form onChange>
+                <input 
+                type= "text"/>
+            </form>
             
         </div>
     )

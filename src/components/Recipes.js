@@ -29,12 +29,9 @@ export const Recipes = (props) => {
             </div>
             <Link to= {`${recipe.recipe.label}`} className = "recipe_buttons"> View Recipe</Link>
                 </div>
-           </div>
-          
-       
-          );
-          }
-          )
+    </div>
+
+);})
           } 
           </div>
           </div>

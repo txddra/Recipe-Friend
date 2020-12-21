@@ -56,7 +56,7 @@ button:focus {
 }
 
 .App-header {
-  background-color: #73595c;
+  background-color: #b1d8b7;
   height: 90px;
   padding: 30px;
   color: white;
@@ -65,6 +65,9 @@ button:focus {
 
 .App-title {
   font-size: 1.5em;
+}
+.app-subtitle{
+  text-shadow: 2px 2px #54902a
 }
 
 .recipe_buttons {

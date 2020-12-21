@@ -1,12 +1,22 @@
-import React from 'react'
+import React from 'react';
 
-const Search = ({ser}) => {
+
+const Search = ({searchValue, recipeFetch}) => {
     return (
         <div>
-            <form onChange>
+            <form 
+                onChange={(e)=> recipeFetch(e.target.value)} 
+            style={{marginBottom:"2rem"}}>
                 <input 
-                type= "text"/>
+                // onChange ={{}}
+                style={{marginTop: "2rem"}}
+                className="form__input"
+                type= "text"
+                value ={searchValue}
+                />
+                 <button className='form__button'>Search</button>
             </form>
+            
             
         </div>
     )

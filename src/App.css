@@ -65,9 +65,10 @@ button:focus {
 
 .App-title {
   font-size: 1.5em;
+  text-shadow: 2px 2px #54902a;
 }
 .app-subtitle{
-  text-shadow: 2px 2px #54902a
+  color:#54902a
 }
 
 .recipe_buttons {

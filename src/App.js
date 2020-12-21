@@ -6,9 +6,6 @@ import Search from "./Search/Search"
 // import Recipes from './components/Recipes';
 
 
-// const chicken = ;
-
-
 
 function App(){
   const [searchValue, setSearchValue] = useState("");
@@ -23,7 +20,8 @@ function App(){
     try{
       const response = await fetch (`https://api.edamam.com/search?q=${inputValue}&count=3&app_id=${API_KEY1}&app_key=${API_KEY2}`)
 
-      const data =await response.json()
+      const data =await response.json();
+      console.log(data)
     }catch(e){
 
     }

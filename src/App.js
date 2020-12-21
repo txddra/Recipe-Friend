@@ -1,6 +1,6 @@
-import React, { Component } from "react";
+// import React, { Component } from "react";
 import './App.css';
-
+import {useState} from "react"
 import Search from "./Search/Search"
 // import RecipeForm from './components/RecipeForm';
 // import Recipes from './components/Recipes';
@@ -13,13 +13,22 @@ const API_KEY2 =   process.env.REACT_APP_RECIPE_KEY_2
 
 
 function App(){
+  const [searchValue, setSearchValue] = useState("");
+
+
   return (
+
+
     <div className="App">
-         <header className="App-header">
+        <header className="App-header">
           <h1 className="app-title"> Recipe Friend</h1>
-          <h3><em>The helpful, handy food finder.</em></h3>
+          <h3 className = "app-subtitle"><em>The helpful, handy food finder.</em></h3>
         </header>
+        <Search
+        searchValue={searchValue}
+        setSearchValue ={setSearchValue} />
     </div>
+    
   )
 }
 

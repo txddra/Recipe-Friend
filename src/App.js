@@ -9,6 +9,9 @@ import Search from "./Search/Search"
 
 function App(){
   const [searchValue, setSearchValue] = useState("");
+
+  const [recipeResults, setRecipeResults] = useState([]);
+
   
   
   async function recipeFetch (inputValue){
@@ -18,10 +21,10 @@ function App(){
     const API_KEY2 =   process.env.REACT_APP_RECIPE_KEY_2
 
     try{
-      const response = await fetch (`https://api.edamam.com/search?q=${inputValue}&count=3&app_id=${API_KEY1}&app_key=${API_KEY2}`)
+      const response = await fetch (`https://api.edamam.com/search?q=${inputValue}&app_id=${API_KEY1}&app_key=${API_KEY2}`)
 
-      const data =await response.json();
-      console.log(data)
+      const data = await response.json();
+      setRecipeResults(data.Search || [])
     }catch(e){
 
     }
@@ -36,8 +39,13 @@ function App(){
         </header>
         <Search
         searchValue={searchValue}
-        recipeFetch ={recipeFetch} />
-    </div>
+        recipeFetch ={recipeFetch}
+        recipeResults ={recipeResults}
+        />
+        
+      
+      </div>
+    
     
   )
 }

@@ -7,6 +7,7 @@ const Search = ({searchValue, recipeFetch, recipeResults}) => {
         <div>
             <form 
                 onChange={(e)=> recipeFetch(e.target.value)} 
+                
                 style={{marginBottom:"2rem"}}>
                 
             <input 
@@ -14,8 +15,11 @@ const Search = ({searchValue, recipeFetch, recipeResults}) => {
                 className="form__input"
                 type= "text"
                 value ={searchValue}
+                onSubmit={recipeFetch}
             />
-                <button className='form__button'>Search</button>
+                <button 
+                // onClick={}
+                className='form__button'>Search</button>
             </form>
             
             {searchValue !== "" && <SearchList recipeResults={recipeResults}/>}

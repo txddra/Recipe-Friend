@@ -4,8 +4,8 @@ import './App.css';
 import RecipeForm from './components/RecipeForm';
 import Recipes from './components/Recipes'
 
-const API_KEY1 =  `b87d0857`
-const API_KEY2 = `11bf59d067701580d54a3c72b5bd2161`;
+const API_KEY1 =   process.env.REACT_APP_RECIPE_KEY_1
+const API_KEY2 =   process.env.REACT_APP_RECIPE_KEY_2
 // const chicken = ;
 
 

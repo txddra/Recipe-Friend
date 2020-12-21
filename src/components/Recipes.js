@@ -1,6 +1,9 @@
 
 
-import React from 'react'
+import React from 'react';
+import { Link } from 'react-router-dom';
+import "../App.css"
+
 
 export const Recipes = (props) => {
     return (
@@ -21,10 +24,10 @@ export const Recipes = (props) => {
                     {recipe.recipe.label.length < 20 ? `${recipe.recipe.label}` : `${recipe.recipe.label.substring(0,25)}...`}
                     </h5>
                 <p className ="recipes__subtitle">Publisher:</p>
-                <span>{recipe.recipe.source}</span>
+                <span className ='publisher_text'>{recipe.recipe.source}</span>
 
             </div>
-            <button className = "recipe_buttons"> View Recipe</button>
+            <Link to= {`${recipe.recipe.label}`} className = "recipe_buttons"> View Recipe</Link>
                 </div>
            </div>
           

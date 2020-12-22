@@ -1,10 +1,19 @@
-import React from "react";
+import React, { Component } from "react";
 
-const Recipe =()=>(
 
-<div>Recipe component</div>
-)
-    
+
+export const Recipe = () => {
+    state={
+        activeRecipe:[]
+    }
+
+    componentDidMount
+    render (){ 
+        <div>
+            
+        </div>
+}
+}
 
     
 

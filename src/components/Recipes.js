@@ -3,6 +3,8 @@
 import React from 'react'
 
 export const Recipes = (props) => {
+
+    
     return (
     <div className = "container">
         <div className="row">
@@ -10,7 +12,7 @@ export const Recipes = (props) => {
           return (
             <div key ={recipe.recipe.label} className = "col-md-4" style ={{marginBottom:"2rem"}}>
                 <div className ="recipes__box">
-            <img
+            <img 
             className="recipe__box-img" 
             src={recipe.recipe.image} 
             alt={recipe.recipe.label}/>
